@@ -1,0 +1,238 @@
+\documentclass[twoside,twocolumn,9pt]{article}
+\usepackage{lipsum}
+\usepackage{extsizes}
+\usepackage[super,sort&compress,comma]{natbib} 
+\usepackage[version=3]{mhchem}
+\usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
+\usepackage{balance}
+\usepackage{mathptmx}
+\usepackage{sectsty}
+\usepackage{graphicx} 
+\usepackage{lastpage}
+\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,small,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{fnpos}
+\usepackage[english]{babel}
+\addto{\captionsenglish}{%
+  \renewcommand{\refname}{Notes and references}
+}
+\usepackage{array}
+\usepackage{droidsans}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage[compact]{titlesec}
+\usepackage{hyperref}
+
+
+\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment out if not required.
+
+\definecolor{cream}{RGB}{222,217,201}
+
+\begin{document}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+\fancypagestyle{plain}{
+%%%HEADER%%%
+\renewcommand{\headrulewidth}{0pt}
+}
+%%%END OF HEADER%%%
+
+%%%PAGE SETUP - Please do not change any commands within this section%%%
+\makeFNbottom
+\makeatletter
+\renewcommand\LARGE{\@setfontsize\LARGE{15pt}{17}}
+\renewcommand\Large{\@setfontsize\Large{12pt}{14}}
+\renewcommand\large{\@setfontsize\large{10pt}{12}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{7pt}{10}}
+\makeatother
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand\footnoterule{\vspace*{1pt}% 
+\color{cream}\hrule width 3.5in height 0.4pt \color{black}\vspace*{5pt}} 
+\setcounter{secnumdepth}{5}
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1}            
+\renewcommand\@makefntext[1] 
+{\noindent\makebox[0pt][r]{\@thefnmark\,}#1}
+\makeatother 
+\renewcommand{\figurename}{\small{Fig.}~}
+\sectionfont{\sffamily\Large}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\bf}
+\setstretch{1.125} %Line space. In particular, please do not alter this line.
+\setlength{\skip\footins}{0.8cm}
+\setlength{\footnotesep}{0.25cm}
+\setlength{\jot}{10pt}
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+\titlespacing*{\subsection}{0pt}{15pt}{1pt}
+%%%END OF PAGE SETUP%%%
+
+%%%FOOTER%%%
+\fancyfoot{}
+
+%TODO
+\fancyfoot[RO]{\footnotesize{\sffamily{\emph{Chem2. Org. Lab., EXPNO. }~\textbar  \hspace{2pt}\thepage}}}
+\fancyfoot[LE]{\footnotesize{\sffamily{\thepage~\textbar\emph{Chem2. Org. Lab., EXPNO. }}}}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\columnsep}{6.5mm}
+\setlength\bibsep{1pt}
+%%%END OF FOOTER%%%
+
+%%%FIGURE SETUP - please do not change any commands within this section%%%
+\makeatletter 
+\newlength{\figrulesep} 
+\setlength{\figrulesep}{0.5\textfloatsep} 
+
+\newcommand{\topfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\botfigrule}{\vspace*{-2pt}% 
+\noindent{\color{cream}\rule[\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\dblfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\textwidth}{1.5pt}} }
+
+\makeatother
+
+%%%TITLE, AUTHORS AND ABSTRACT%%%
+\twocolumn[
+  \begin{@twocolumnfalse}
+{\includegraphics[height=57pt]{head_foot/edinburghlogo}\hfill\raisebox{0pt}[0pt][0pt]\\
+\includegraphics[width=18.5cm]{head_foot/labreport}}\par
+\vspace{2em}
+\sffamily
+\begin{tabular}{m{4.5cm} p{13.5cm} }
+
+% TODO Title, Name, etc.
+ & \noindent\LARGE{\textbf{This is the title}} \\%Article title goes here instead of the text "This is the title"
+\vspace{0.3cm} & \vspace{0.3cm} \\
+
+ & \noindent\large{Full Name\textit{$^{a}$}, sXXXXXXX(matriculation number), A01 (bench number)} \\%Author names go here instead of "Full name", etc.
+ Received \\ \vspace{0.3cm} Chem2 Org Lab \\ \vspace{0.3cm} www.chem.ed.ac.uk 
+
+
+\end{tabular}
+\vspace{1cm}
+
+ \end{@twocolumnfalse} \vspace{0.6cm}
+  ]
+
+%%%FONT SETUP - please do not change any commands within this section
+\renewcommand*\rmdefault{bch}\normalfont\upshape
+\rmfamily
+\section*{}
+\vspace{-1cm}
+
+%Footnote
+\footnotetext{\textit{$^a$ University of Edinburgh, Joseph Black Building, David Brewster Road, Edinburgh, Scotland, EH9 3FJ}}
+
+
+
+%TODO Main Text
+The main text of the article\cite{Mena2000} should appear here.
+
+\subsection{This is the subsection heading style}
+Section headings can be typeset with and without numbers.\cite{Abernethy2003}
+
+\subsubsection{This is the subsubsection style.~~} These headings should end in a full point.  
+
+\paragraph{This is the next level heading.~~} For this level please use \texttt{\textbackslash paragraph}. These headings should also end in a full point.
+
+\section{Graphics and tables}
+\subsection{Graphics}
+Graphics should be inserted on the page where they are first mentioned (unless they are equations, which appear in the flow of the text).\cite{Cotton1999}
+
+\begin{figure}[h]
+\centering
+  \includegraphics[height=3cm]{example1}
+  \caption{An example figure caption.}
+  \label{fgr:example}
+\end{figure}
+
+\begin{figure*}
+ \centering
+ \includegraphics[height=3cm]{example2}
+ \caption{A two-column figure.}
+ \label{fgr:example2col}
+\end{figure*}
+
+\subsection{Tables}
+Tables typeset in RSC house style do not include vertical lines. Table footnote symbols are lower-case italic letters and are typeset at the bottom of the table. Table captions do not end in a full point.\cite{Arduengo1992,Eisenstein2005}
+
+
+\begin{table}[h]
+\small
+  \caption{\ An example of a caption to accompany a table}
+  \label{tbl:example1}
+  \begin{tabular*}{0.48\textwidth}{@{\extracolsep{\fill}}lll}
+    \hline
+    Header one (units) & Header two & Header three \\
+    \hline
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\
+    10 & 11 & 12 \\
+    \hline
+  \end{tabular*}
+\end{table}
+
+ Adding notes to tables can be complicated.  Perhaps the easiest method is to generate these manually.
+ % \footnote[4]{Footnotes should appear here. These might include comments relevant to but not central to the matter under discussion, limited experimental and spectral data, and crystallographic data.}
+
+\begin{table*}
+\small
+  \caption{\ An example of a caption to accompany a table \textendash\ table captions do not end in a full point}
+  \label{tbl:example2}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllllll}
+    \hline
+    Header one & Header two & Header three & Header four & Header five & Header six  & Header seven\\
+    \hline
+    1 & 2 & 3 & 4 & 5 & 6  & 7\\
+    8 & 9 & 10 & 11 & 12 & 13 & 14 \\
+    15 & 16 & 17 & 18 & 19 & 20 & 21\\
+    \hline
+  \end{tabular*}
+\end{table*}
+
+\section{Equations}
+
+Equations can be typeset inline \textit{e.g.}\ $ y = mx + c$ or displayed with and without numbers:
+
+ \[ A = \pi r^2 \]
+
+\begin{equation}
+  \frac{\gamma}{\epsilon x} r^2 = 2r
+\end{equation}
+
+You can also put lists into the text. You can have bulleted or numbered lists of almost any kind. 
+The \texttt{mhchem} package can also be used so that formulae are easy to input: \texttt{\textbackslash ce\{H2SO4\}} gives \ce{H2SO4}. 
+
+For footnotes in the main text of the article please number the footnotes to avoid duplicate symbols. \textit{e.g.}\ \texttt{\textbackslash footnote[num]\{your text\}}. The corresponding author $\ast$ counts as footnote 1, ESI as footnote 2, \textit{e.g.}\ if there is no ESI, please start at [num]=[2], if ESI is cited in the title please start at [num]=[3] \textit{etc.} Please also cite the ESI within the main body of the text using \dag.
+
+\section{Conclusions}
+The conclusions section should come in this section at the end of the article, before the Conflicts of interest statement.
+
+\section*{Author Contributions}
+\lipsum
+%%%END OF MAIN TEXT%%%
+
+%The \balance command can be used to balance the columns on the final page if desired. It should be placed anywhere within the first column of the last page.
+
+\balance
+
+%If notes are included in your references you can change the title from 'References' to 'Notes and references' using the following command:
+%\renewcommand\refname{Notes and references}
+
+%%%REFERENCES%%%
+\bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
+\bibliographystyle{rsc} %the RSC's .bst file
+
+\end{document}
