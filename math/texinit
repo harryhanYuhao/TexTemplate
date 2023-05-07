@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cp -i ~/psu/bin/tex/preamble.tex ~/psu/bin/tex/main.tex -t .
+cp -i ~/psu/bin/tex/preamble.tex ~/psu/bin/tex/main.tex ~/psu/bin/tex/macros.tex -t .

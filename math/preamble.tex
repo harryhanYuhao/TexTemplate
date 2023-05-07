@@ -25,6 +25,8 @@
 \usepackage{multicol}
 \usepackage{hyperref}
 \usepackage{import}
+\usepackage{bm}
+\usepackage{breqn}
 
 
 \newtheorem{theorem}{Theorema}[section]
@@ -49,7 +51,7 @@
 \renewenvironment{proof}{\vspace{0.4cm}\noindent\small{\emph{Demonstratio.}}}{\qed\vspace{0.4cm}}
 % \renewenvironment{proof}{{\bfseries\emph{Demonstratio.}}}{\qed}
 \renewcommand\qedsymbol{Q.E.D.}
-% \renewcommand{\chaptername}{Caput}
+\renewcommand{\chaptername}{Caput}
 \renewcommand{\contentsname}{Index Capitum} % Index Capitum 
 \renewcommand{\emph}[1]{\textbf{\textit{#1}}}
 \renewcommand{\ker}[1]{\operatorname{Ker}{#1}}
@@ -58,7 +60,16 @@
 
 % New Commands
 \newcommand{\bb}[1]{\mathbb{#1}} %TODO add this line to nvim snippets
+
+% ALGEBRA
 \newcommand{\orb}[2]{\text{Orb}_{#1}({#2})}
 \newcommand{\stab}[2]{\text{Stab}_{#1}({#2})}
 \newcommand{\im}[1]{\text{im}{\ #1}}
 \newcommand{\se}[2]{\text{send}_{#1}({#2})}
+
+%STATISTICS
+\newcommand{\var}[1]{\text{Var}(#1)}
+\newcommand{\ud}[1]{\underline{#1}}
+\newcommand{\cor}[1]{\text{Cor}(#1)}
+\newcommand{\std}[1]{\text{Std}(#1)}
+\newcommand{\ste}[1]{\text{S.E.}(#1)}
