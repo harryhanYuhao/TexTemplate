@@ -4,10 +4,7 @@ RED="\033[0;31m"
 NC="\033[0m"
 
 mkdir -p $HOME/psu/bin/tex
-cp main.tex preamble.tex macros.tex -t $HOME/psu/bin/tex
-
-mkdir -p $HOME/psu/bin/tex
-cp texinit -t $HOME/psu/bin/tex
+cp main.tex preamble.tex macros.tex texinit -t $HOME/psu/bin/tex
 chmod +x $HOME/psu/bin/tex/texinit
 
 printf "Appending To Path\n"
